@@ -18,8 +18,7 @@ pipeline {
             }
             steps {
                 script {
-                    sh 'source ppclpenv/bin/activate'
-                    sh 'python setup.py sdist'
+                    sh 'ppclpenv/bin/python setup.py sdist'
                 }
             }
         }
