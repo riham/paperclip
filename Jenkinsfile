@@ -18,6 +18,7 @@ pipeline {
             }
             steps {
                 script {
+                    sh 'source ~/.bashrc'
                     sh 'pyenv virtualenv --force 3.7.4 ppenv; pyenv activate ppenv'
                     sh 'python3 setup.py sdist'
                 }
