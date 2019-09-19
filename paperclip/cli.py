@@ -1,14 +1,23 @@
+"""
+BlaBla
+"""
 import argparse
 import os.path
 import yaml
 
 
 def load_config(fname):
+    """
+    BlaBla load_config
+    """
     with open(fname, "r") as conf_file:
         return yaml.safe_load(conf_file.read())
 
 
 def build_parser():
+    """
+    BlaBla build_parser
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument(
         '-c', '--config', dest='config', action='store', type=str,
@@ -19,6 +28,9 @@ def build_parser():
 
 
 def main():
+    """
+    BlaBla main
+    """
     parser = build_parser()
     params, other_params = parser.parse_known_args()
     conf = load_config(params.config)
