@@ -18,7 +18,7 @@ pipeline {
             }
             steps {
                 script {
-                    sh 'ppclpenv/bin/python setup.py sdist'
+                    sh 'ppclpenv/bin/python3 setup.py sdist'
                 }
             }
         }
