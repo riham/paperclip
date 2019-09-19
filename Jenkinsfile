@@ -18,8 +18,8 @@ pipeline {
             }
             steps {
                 script {
-                    sh 'pyenv virtualenv ppenv; pyenv activate "${ppenv: -1}"'
-                    sh 'python3 setup.py sdist'
+                    sh '/bin/bash pyenv virtualenv ppenv; pyenv activate "${ppenv: -1}"'
+                    sh '/bin/bash python3 setup.py sdist'
                 }
             }
         }
