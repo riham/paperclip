@@ -18,7 +18,8 @@ pipeline {
             }
             steps {
                 script {
-                    sh 'ppclpenv/bin/python3 setup.py sdist'
+                    sh 'pyenv virtualenv paperclip; pyenv activate "${paperclip: -1}"'
+                    sh 'python3 setup.py sdist'
                 }
             }
         }
